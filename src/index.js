@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
 //Middlewares as gate keepers or action creator. They stop action, inspect it and let it pass or not. 
 //Allow us to itecept actions. All the actions flow the middleware. All of them are functions. 
-
+// Middleware is the helper to Ajax request.
 
 import App from './components/app';
 import reducers from './reducers';
