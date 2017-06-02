@@ -1,11 +1,13 @@
 svg:not(:root) {
     overflow: hidden;
-    height: 171px;
+    height: 150px;
   }
 
 .input-group {
-      position: relative;
-      display: table;
-      border-collapse: separate;
-      margin-top: 20px;
+      margin: 20px 0px;
     }
+
+td, th {
+  vertical-align: middle !important;
+  text-align: center !important;
+}
