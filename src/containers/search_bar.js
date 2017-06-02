@@ -2,19 +2,19 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {fetchWeather} from '../actions/index';
-// You can put the export here instead on the bottom.
-  class SearchBar extends Component {
 
-  constructor (props) {
-    super(props)
-    this.state = { term : ''}
-    //the initial state
-    this.OninputChange = this.OninputChange.bind(this)
-    this.onFormSubmit = this.onFormSubmit.bind(this)
-    //bindin the OninputChange function to this which is SearchBar and bind and replcace
-    //the function with it. Kind of replacing the local function.
-    // if you got a call back, you need to bind it or use fat arrow function
-  }
+
+class SearchBar extends Component {
+    constructor (props) {
+      super(props)
+      this.state = { term : ''}
+      //the initial state
+      this.OninputChange = this.OninputChange.bind(this)
+      this.onFormSubmit = this.onFormSubmit.bind(this)
+      //bindin the OninputChange function to this which is SearchBar and bind and replcace
+      //the function with it. Kind of replacing the local function.
+      // if you got a call back, you need to bind it or use fat arrow function
+    }
 
   OninputChange(event) {
     // console.log(event.target.value)
@@ -39,10 +39,10 @@ import {fetchWeather} from '../actions/index';
       <form onSubmit={this.onFormSubmit}className="input-group" >
 
             <input
-            placeholder="Get the the weather"
-            className="form-control"
-            value={this.state.term}
-            onChange={this.OninputChange}
+              placeholder="Get the the weather"
+              className="form-control"
+              value={this.state.term}
+              onChange={this.OninputChange}
             />
           <span className="input-group-btn">
             <button type="submit" className="btn btn-secondary">Submit</button>

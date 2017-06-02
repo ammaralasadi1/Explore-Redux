@@ -22,8 +22,7 @@ import GoogleMap from '../components/google_map'
             <td><Chart data = {temps} color="orange" units="C"/></td>
             <td><Chart data = {pressures} color="green" units="hPa"/></td>
             <td><Chart data = {humidities} color="red" units="%"/></td>
-
-       </tr>
+      </tr>
         )
       }
    render(){
@@ -41,8 +40,6 @@ import GoogleMap from '../components/google_map'
             {this.props.weather.map(this.renderWeather)}
           </tbody>
       </table>
-
-
     );
   }
 }
@@ -56,7 +53,7 @@ import GoogleMap from '../components/google_map'
 // we can do it in es6 and make it cleaner because we are pulling one property.
 
 function mapStateToProps({weather}) {  //similar to const weathe = state.weather
-  return {weather}; //{weather} ==={weather:weather}
+  return {weather}; //{weather} === {weather:weather}
 }
 //we need to connect the component with mapDispatchToProps instead of the default so we can have access this.props.weather
 export default connect(mapStateToProps)(WeatherList);
