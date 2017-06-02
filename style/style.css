@@ -1,0 +1,11 @@
+svg:not(:root) {
+    overflow: hidden;
+    height: 171px;
+  }
+
+.input-group {
+      position: relative;
+      display: table;
+      border-collapse: separate;
+      margin-top: 20px;
+    }
