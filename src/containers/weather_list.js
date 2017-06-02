@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Chart from '../components/chart'
+import GoogleMap from '../components/google_map'
 
 
  class WeatherList extends Component {
@@ -9,13 +10,15 @@ import Chart from '../components/chart'
      const temps = _.map(cityData.list.map(weather => weather.main.temp), (temp) => temp - 273); //change it to C instead K
      const pressures = cityData.list.map(weather => weather.main.pressure);
      const humidities = cityData.list.map(weather => weather.main.humidity);
+     const {lon, lat} = cityData.city.coord; //ES6 way of grabbing that end point and making a variable when passing paramaters.
+
+
      // mapping the list array and then map the main object and change it
      //to an array so we can use it with React Sparklines. it only take arrays.
      console.log(temps)
       return (
        <tr key={name}>
-
-            <td>{name}</td>
+            <td><GoogleMap lon={lon} lat={lat}/></td>
             <td><Chart data = {temps} color="orange" units="C"/></td>
             <td><Chart data = {pressures} color="green" units="hPa"/></td>
             <td><Chart data = {humidities} color="red" units="%"/></td>

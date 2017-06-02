@@ -13,3 +13,6 @@ export default function(state = [], action) {
   return state;
 
 }
+
+// - always return a new object that take the place of a new state.
+// -

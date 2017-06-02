@@ -14,3 +14,7 @@ export function fetchWeather(city) {
   };
 
 }
+
+// the use of middleware (redux-promise) to handle a promise when using axios to make an ajax request.
+//  althoug ajax request are syncrisis in natue puting the request in the payload is handled by redux like data.
+//all of it achived thrrough middleware
