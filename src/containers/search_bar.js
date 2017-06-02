@@ -38,12 +38,12 @@ import {fetchWeather} from '../actions/index';
       //to the backend. It is nor react specific, html form elements do that.
       <form onSubmit={this.onFormSubmit}className="input-group" >
 
-        <input
-        placeholder="Get the the weather"
-        className="form-control"
-        value={this.state.term}
-        onChange={this.OninputChange}
-        />
+            <input
+            placeholder="Get the the weather"
+            className="form-control"
+            value={this.state.term}
+            onChange={this.OninputChange}
+            />
           <span className="input-group-btn">
             <button type="submit" className="btn btn-secondary">Submit</button>
           </span>
