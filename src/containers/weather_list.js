@@ -14,10 +14,12 @@ import Chart from '../components/chart'
      console.log(temps)
       return (
        <tr key={name}>
-        <td>{name}</td>
-        <td>
-          <Chart data = {temps} color="orange"/>
-        </td>
+
+            <td>{name}</td>
+            <td><Chart data = {temps} color="orange"/></td>
+            <td><Chart data = {pressures} color="green"/></td>
+            <td><Chart data = {humidities} color="red"/></td>
+
        </tr>
         )
       }
