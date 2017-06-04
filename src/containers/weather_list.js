@@ -23,7 +23,7 @@ import GoogleMap from '../components/google_map'
             <td><Chart data = {pressures} color="green" units="hPa"/></td>
             <td><Chart data = {humidities} color="red" units="%"/></td>
       </tr>
-        )
+            )
       }
    render(){
     return(

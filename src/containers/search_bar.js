@@ -11,7 +11,7 @@ class SearchBar extends Component {
       //the initial state
       this.OninputChange = this.OninputChange.bind(this)
       this.onFormSubmit = this.onFormSubmit.bind(this)
-      //bindin the OninputChange function to this which is SearchBar and bind and replcace
+      //bindind the OninputChange function to this which is SearchBar and bind and replcace
       //the function with it. Kind of replacing the local function.
       // if you got a call back, you need to bind it or use fat arrow function
     }
