@@ -13,7 +13,7 @@ import {connect} from 'react-redux';
       return (
        <ul key='hi'>
             {results.map(function(result, index){
-                   return <li key={ index }><a href={result.webUrl}>{result.description}</a></li>;
+                   return <li key={ index }><a href={result.webUrl}>{result.webTitle}</a></li>;
                  })}
       </ul>
     )
