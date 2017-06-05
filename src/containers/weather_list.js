@@ -15,7 +15,6 @@ import GoogleMap from '../components/google_map'
 
      // mapping the list array and then map the main object and change it
      //to an array so we can use it with React Sparklines. it only take arrays.
-     console.log(temps)
       return (
        <tr key={name}>
             <td><GoogleMap lon={lon} lat={lat}/></td>

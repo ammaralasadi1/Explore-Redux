@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {fetchWeather} from '../actions/index';
+import {fetchNews} from '../actions/news_action';
 
 
 class SearchBar extends Component {
@@ -9,8 +10,8 @@ class SearchBar extends Component {
       super(props)
       this.state = { term : ''}
       //the initial state
-      this.OninputChange = this.OninputChange.bind(this)
-      this.onFormSubmit = this.onFormSubmit.bind(this)
+      this.OninputChange = this.OninputChange.bind(this);
+      this.onFormSubmit = this.onFormSubmit.bind(this);
       //bindind the OninputChange function to this which is SearchBar and bind and replcace
       //the function with it. Kind of replacing the local function.
       // if you got a call back, you need to bind it or use fat arrow function
@@ -24,6 +25,7 @@ class SearchBar extends Component {
   onFormSubmit (event) {
     event.preventDefault();
     this.props.fetchWeather(this.state.term);
+    this.props.fetchNews(this.state.term);
     this.setState({term: ''})
   };
   //Prevents the default behavior for the form element to refresh the page.
@@ -54,8 +56,10 @@ class SearchBar extends Component {
 }
 
 function mapDispatchTopProps (dispatch) {
-  return bindActionCreators({fetchWeather}, dispatch);
+  return bindActionCreators({fetchWeather, fetchNews}, dispatch);
+        // bindActionCreators({fetchNews}, dispatch);
 }
+
 
 export default connect(null, mapDispatchTopProps)(SearchBar);
 // by passing null as an argument whenever we are psssing a function it goes as a seconds arguments
