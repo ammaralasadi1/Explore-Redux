@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-
  class ArtistList extends Component {
    renderArtist(response) {
 
      const results = response.topartists.artist;
-
      console.log(results);
      // mapping the list array and then map the main object and change it
      //to an array so we can use it with React Sparklines. it only take arrays.
@@ -15,7 +13,12 @@ import {connect} from 'react-redux';
            {results.map(function(result, index){
                   return <h6 key={ index }>
                   <a href={result.url}>{result.name}</a>
+                  <h1>{result.image[2]}</h1>
                   </h6>;
+
+
+
+
 
                 })}
      </div>
