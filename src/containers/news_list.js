@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 
      const results = response.response.results;
 
-     console.log(results);
+    //  console.log(results);
      // mapping the list array and then map the main object and change it
      //to an array so we can use it with React Sparklines. it only take arrays.
       return (

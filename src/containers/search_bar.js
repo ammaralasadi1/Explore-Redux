@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {fetchWeather} from '../actions/index';
 import {fetchNews} from '../actions/news_action';
+import {fetchArtist} from '../actions/top_artists_action.js'
 
 
 class SearchBar extends Component {
@@ -26,6 +27,7 @@ class SearchBar extends Component {
     event.preventDefault();
     this.props.fetchWeather(this.state.term);
     this.props.fetchNews(this.state.term);
+    this.props.fetchArtist(this.state.term);
     this.setState({term: ''})
   };
   //Prevents the default behavior for the form element to refresh the page.
@@ -56,7 +58,7 @@ class SearchBar extends Component {
 }
 
 function mapDispatchTopProps (dispatch) {
-  return bindActionCreators({fetchWeather, fetchNews}, dispatch);
+  return bindActionCreators({fetchWeather, fetchNews, fetchArtist}, dispatch);
         // bindActionCreators({fetchNews}, dispatch);
 }
 
