@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 
- class NewsList extends Component {
-   renderNews(response) {
+ class ArtistList extends Component {
+   renderArtist(response) {
 
-     const results = response.response.results;
+     const results = response.topartists;
 
      console.log(results);
      // mapping the list array and then map the main object and change it
@@ -30,7 +30,7 @@ import {connect} from 'react-redux';
             </tr>
           </thead>
           <tbody>
-            {this.props.news.map(this.renderNews)}
+            {this.props.artist.map(this.renderArtist)}
           </tbody>
       </table>
     );
@@ -45,8 +45,8 @@ import {connect} from 'react-redux';
 
 // we can do it in es6 and make it cleaner because we are pulling one property.
 
-function mapStateToProps({news}) {  //similar to const weathe = state.weather
-  return {news}; //{weather} === {weather:weather}
+function mapStateToProps({artist}) {  //similar to const weathe = state.weather
+  return {artist}; //{weather} === {weather:weather}
 }
 //we need to connect the component with mapDispatchToProps instead of the default so we can have access this.props.weather
-export default connect(mapStateToProps)(NewsList);
+export default connect(mapStateToProps)(ArtistList);
