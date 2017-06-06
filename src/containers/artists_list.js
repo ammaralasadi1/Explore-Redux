@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {name} from './containers/weather_list.js';
 
  class ArtistList extends Component {
    renderArtist(response) {
