@@ -7,7 +7,7 @@ export default function(state = [], action) {
       //concat does not chage the state but returns a new aray of state.
       //you should not mutate existing state with redux.
       // or use the ES6 which goes like:
-      return [action.payload.data, ...state];
+      return [action.payload.data];
 
   }
   return state;

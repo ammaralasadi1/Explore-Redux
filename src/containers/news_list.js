@@ -23,16 +23,12 @@ import {connect} from 'react-redux';
       }
    render(){
     return(
-      <table className='table table-hover'>
-          <thead>
-            <tr>
-              <th>News</th>
-            </tr>
-          </thead>
-          <tbody>
+      <div className='div div-hover'>
+
+            <h1>News</h1>
             {this.props.news.map(this.renderNews)}
-          </tbody>
-      </table>
+
+      </div>
     );
   }
 }

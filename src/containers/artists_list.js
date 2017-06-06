@@ -4,39 +4,31 @@ import {connect} from 'react-redux';
  class ArtistList extends Component {
    renderArtist(response) {
 
-     const results = response.topartists.artist;
+
+     let results = response.topartists;
+     if (!results.artist) return <div>Error</div>;
+     results = results.artist // Error handling for if there is no artists.
+
      console.log(results);
      // mapping the list array and then map the main object and change it
      //to an array so we can use it with React Sparklines. it only take arrays.
      return (
-      <div key='hi'>
+      <div className="container" key='hi'>
            {results.map(function(result, index){
                   return <h6 key={ index }>
                   <a href={result.url}>{result.name}</a>
-                  <h1>{result.image[2]}</h1>
+                    <img src={result.image[3]['#text']}/>
                   </h6>;
-
-
-
-
-
                 })}
      </div>
-   )
-   }
+   )}
 
    render(){
     return(
-      <table className='table table-hover'>
-          <thead>
-            <tr>
-              <th>Artisi</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.props.artist.map(this.renderArtist)}
-          </tbody>
-      </table>
+      <div className="container">
+        <h1>The top artist from this countrey</h1>
+        <h1>{this.props.artist.map(this.renderArtist)}</h1>
+      </div>
     );
   }
 }

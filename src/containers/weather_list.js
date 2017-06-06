@@ -12,16 +12,16 @@ import GoogleMap from '../components/google_map'
      const humidities = cityData.list.map(weather => weather.main.humidity);
      const {lon, lat} = cityData.city.coord; //ES6 way of grabbing that end point and making a variable when passing paramaters.
 
-
+console.log(temps)
      // mapping the list array and then map the main object and change it
      //to an array so we can use it with React Sparklines. it only take arrays.
       return (
-       <tr key={name}>
-            <td><GoogleMap lon={lon} lat={lat}/></td>
-            <td><Chart data = {temps} color="orange" units="C"/></td>
-            <td><Chart data = {pressures} color="green" units="hPa"/></td>
-            <td><Chart data = {humidities} color="red" units="%"/></td>
-      </tr>
+       <div key={name}>
+            <div><GoogleMap lon={lon} lat={lat}/></div>
+            <div><Chart data = {temps} color="orange" units="C"/></div>
+            <div><Chart data = {pressures} color="green" units="hPa"/></div>
+            <div><Chart data = {humidities} color="red" units="%"/></div>
+      </div>
             )
       }
    render(){
