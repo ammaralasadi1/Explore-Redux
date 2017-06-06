@@ -6,7 +6,7 @@ import GoogleMap from '../components/google_map'
 
  class WeatherList extends Component {
    renderWeather(cityData) {
-     const name = cityData.city.name;
+    export const name = cityData.city.name;
      const temps = _.map(cityData.list.map(weather => weather.main.temp), (temp) => temp - 273); //change it to C instead K
      const pressures = cityData.list.map(weather => weather.main.pressure);
      const humidities = cityData.list.map(weather => weather.main.humidity);
@@ -17,8 +17,12 @@ console.log(temps)
      //to an array so we can use it with React Sparklines. it only take arrays.
       return (
        <div key={name}>
+        <h1>Hello, {name}</h1>
             <div><GoogleMap lon={lon} lat={lat}/></div>
-            <div><Chart data = {temps} color="orange" units="C"/></div>
+            <div>
+            <h7>Temp</h7>
+            <Chart data = {temps} color="orange" units="C"/>
+            </div>
             <div><Chart data = {pressures} color="green" units="hPa"/></div>
             <div><Chart data = {humidities} color="red" units="%"/></div>
       </div>
@@ -26,19 +30,9 @@ console.log(temps)
       }
    render(){
     return(
-      <table className='table table-hover'>
-          <thead>
-            <tr>
-              <th>City</th>
-              <th>Temp</th>
-              <th>Pressure</th>
-              <th>Humidity</th>
-            </tr>
-          </thead>
-          <tbody>
+            <div>
             {this.props.weather.map(this.renderWeather)}
-          </tbody>
-      </table>
+            </div>
     );
   }
 }

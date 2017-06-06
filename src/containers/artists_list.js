@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {name} from './containers/weather_list.js';
 
  class ArtistList extends Component {
    renderArtist(response) {
@@ -8,7 +9,7 @@ import {connect} from 'react-redux';
      let results = response.topartists;
      if (!results.artist) return <div>Error</div>;
      results = results.artist // Error handling for if there is no artists.
-
+     if (results.length > 5) results.length = 5;
      console.log(results);
      // mapping the list array and then map the main object and change it
      //to an array so we can use it with React Sparklines. it only take arrays.
@@ -19,14 +20,15 @@ import {connect} from 'react-redux';
                   <a href={result.url}>{result.name}</a>
                     <img src={result.image[3]['#text']}/>
                   </h6>;
-                })}
+                  })}
      </div>
-   )}
+   )
+   }
 
    render(){
     return(
       <div className="container">
-        <h1>The top artist from this countrey</h1>
+
         <h1>{this.props.artist.map(this.renderArtist)}</h1>
       </div>
     );
