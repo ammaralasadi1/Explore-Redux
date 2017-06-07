@@ -5,14 +5,13 @@ html {
 .polyline, .svg {
   width: 100%;
   height: 100%;
-  display: inline-block;
 }
 
 .chart {
-  width: 40%;
-  height: 40%;
-  margin: 5px;
-  border: black solid 1px;
+  width: 35%;
+  height: 35%;
+   /*border: black solid 1px;*/
+  margin-right: 50px;
 }
 
 .charts-container {
@@ -20,9 +19,14 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 800px;
-  height: 600px;
   border: 1px solid black;
+  width: 50%;
+  height: 600px;
+  margin: 5px;
+  border: black solid 1px;
+  -webkit-box-shadow: 6px 4px 26px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 4px 26px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 4px 26px 0px rgba(0, 0, 0, 0.75);
 }
 
 p, span {
@@ -30,7 +34,7 @@ p, span {
 }
 
 .g-map {
-  width: 800px;
+  width: 100%;
   height: 600px;
   margin: 0 auto;
   border: 1px solid black;
@@ -77,10 +81,11 @@ p, span {
 }
 
 .map-container {
-  width: 60%;
+  width: 50%;
   margin-right: 10px;
   align-items: center;
 }
+
 .container {
   width: 100%;
 }
