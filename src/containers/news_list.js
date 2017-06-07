@@ -23,11 +23,9 @@ import {connect} from 'react-redux';
       }
    render(){
     return(
-      <div className='div div-hover'>
-
-            <h1>News</h1>
-            {this.props.news.map(this.renderNews)}
-
+      <div className="news-container">
+        <h1>News</h1>
+        {this.props.news.map(this.renderNews)}
       </div>
     );
   }

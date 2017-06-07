@@ -1,23 +1,86 @@
-svg:not(:root) {
-    overflow: hidden;
-    height: 150px;
-  }
-
-.input-group {
-      margin: 20px 0px;
-    }
-
-td, th {
-  vertical-align: middle !important;
-  text-align: center !important;
+html {
+  text-align: center;
 }
 
-td:first-of-type, td:first-of-type > div {
-  height: 200px;
-  width:250px;
+.polyline, .svg {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.chart {
+  width: 40%;
+  height: 40%;
+  margin: 5px;
+  border: black solid 1px;
+}
+
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 600px;
+  border: 1px solid black;
+}
+
+p, span {
+  margin: 5px;
 }
 
 .g-map {
-  width: 600px;
+  width: 800px;
   height: 600px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.app-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.weather-container {
+  height: 100%;
+  width: 100%;
+  margin: 20px;
+}
+
+.artist-container {
+  height: 100%;
+  width: 100%;
+  background-color: orange;
+  margin: 20px;
+}
+
+.search-container {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  margin: 20px;
+}
+
+.news-container {
+  height: 100%;
+  width: 100%;
+  background-color: purple;
+  margin: 20px;
+}
+
+.map-charts-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.map-container {
+  width: 60%;
+  margin-right: 10px;
+  align-items: center;
+}
+.container {
+  width: 100%;
 }

@@ -16,21 +16,35 @@ console.log(temps)
      // mapping the list array and then map the main object and change it
      //to an array so we can use it with React Sparklines. it only take arrays.
       return (
-       <div key={name}>
-        <h1>Hello, {name}</h1>
-            <div><GoogleMap lon={lon} lat={lat}/></div>
-            <div>
-            <h7>Temp</h7>
-            <Chart data = {temps} color="orange" units="C"/>
+        <div key={name}>
+          <h1>Hello, {name}</h1>
+            <div className="map-charts-container">
+              <div className="map-container">
+                <GoogleMap lon={lon} lat={lat}/>
+              </div>
+            <div className="charts-container">
+              <div className="chart">
+                <Chart data = {temps} color="orange" units="C Temp"/>
+              </div>
+            <div className="chart">
+              <Chart data = {pressures} color="green" units="Pressure in hPa"/>
             </div>
-            <div><Chart data = {pressures} color="green" units="hPa"/></div>
-            <div><Chart data = {humidities} color="red" units="%"/></div>
-      </div>
+            <div className="chart">
+              <Chart data = {humidities} color="red" units="% Humidity"/>
+            </div>
+            <div className="chart">
+              <Chart data = {humidities} color="red" units="% Humidity"/>
+            </div>
+            
+          </div>
+        </div>
+  </div>
             )
       }
    render(){
     return(
-            <div>
+            <div className="weather-container">
+            <h1>Weather</h1>
             {this.props.weather.map(this.renderWeather)}
             </div>
     );

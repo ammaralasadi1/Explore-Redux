@@ -21,8 +21,9 @@ class SearchBar extends Component {
     }
 
   OninputChange(event) {
-    // console.log(event.target.value)
-    this.setState({term: event.target.value})
+
+    this.setState({term: event.target.value});
+    console.log(event.target.value);
 
   };
   onFormSubmit (event) {
@@ -51,7 +52,8 @@ class SearchBar extends Component {
       //submiting html request so it makes a cal to the server. it is making a request
   //to the backend. It is nor react specific, html form elements do that.
 
-<div>
+
+<div className="search-container" >
       <form onSubmit={this.onFormSubmit}className="input-group" >
 
 

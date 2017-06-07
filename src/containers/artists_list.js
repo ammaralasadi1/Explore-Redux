@@ -13,7 +13,7 @@ import {connect} from 'react-redux';
      // mapping the list array and then map the main object and change it
      //to an array so we can use it with React Sparklines. it only take arrays.
      return (
-      <div className="container" key='hi'>
+      <div key='hi'>
            {results.map(function(result, index){
                   return <h6 key={ index }>
                   <a href={result.url}>{result.name}</a>
@@ -26,8 +26,8 @@ import {connect} from 'react-redux';
 
    render(){
     return(
-      <div className="container">
-
+      <div className="artist-container">
+        <h1>Top Artists</h1>
         <h1>{this.props.artist.map(this.renderArtist)}</h1>
       </div>
     );

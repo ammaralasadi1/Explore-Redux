@@ -7,11 +7,11 @@ import ArtistList from '../containers/artists_list.js'
 export default class App extends Component {
   render() {
     return (
-      <div>
-      <SearchBar />
-      <WeatherList />
-      <NewsList />
-      <ArtistList />
+      <div className="app-container" >
+      <SearchBar className="container1" />
+      <WeatherList className="container2" />
+      <NewsList className="container3"/>
+      <ArtistList className="container4" />
       </div>
     );
   }
