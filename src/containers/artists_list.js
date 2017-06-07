@@ -11,12 +11,12 @@ import {connect} from 'react-redux';
      if (results.length > 5) results.length = 5;
      console.log(results);
      return (
-      <div key='hi'>
+      <div className="artists" key='hi'>
            {results.map(function(result, index){
-                  return <h6 key={ index }>
-                  <a href={result.url}>{result.name}</a>
-                    <img src={result.image[3]['#text']}/>
-                  </h6>;
+                  return <div className='artist' key={ index }>
+                    <img className='artist-image' src={result.image[3]['#text']}/>
+                    <a className='artist-name' href={result.url}>{result.name}</a>
+                  </div>;
                   })}
      </div>
    )
@@ -26,7 +26,7 @@ import {connect} from 'react-redux';
     return(
       <div className="artist-container">
         <h1>Top Artists</h1>
-        <h1>{this.props.artist.map(this.renderArtist)}</h1>
+        <div>{this.props.artist.map(this.renderArtist)}</div>
       </div>
     );
   }
