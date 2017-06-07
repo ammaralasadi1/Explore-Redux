@@ -10,7 +10,6 @@ html {
 .chart {
   width: 35%;
   height: 35%;
-   /*border: black solid 1px;*/
   margin-right: 50px;
 }
 
@@ -24,9 +23,9 @@ html {
   height: 600px;
   margin: 5px;
   border: black solid 1px;
-  -webkit-box-shadow: 6px 4px 26px 0px rgba(0, 0, 0, 0.75);
+  /*-webkit-box-shadow: 6px 4px 26px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 6px 4px 26px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 6px 4px 26px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 4px 26px 0px rgba(0, 0, 0, 0.75);*/
 }
 
 p, span {

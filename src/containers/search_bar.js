@@ -65,13 +65,7 @@ class SearchBar extends Component {
             <button type="submit" className="btn btn-secondary">Submit</button>
             <button onClick={this.activateRandom}>Feeling lucky?</button>
           </span>
-
-
-
-
-        </form>
-
-
+      </form>
 </div>
     );
   }
