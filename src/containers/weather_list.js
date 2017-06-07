@@ -13,8 +13,6 @@ import GoogleMap from '../components/google_map'
      const {lon, lat} = cityData.city.coord; //ES6 way of grabbing that end point and making a variable when passing paramaters.
 
 console.log(temps)
-     // mapping the list array and then map the main object and change it
-     //to an array so we can use it with React Sparklines. it only take arrays.
       return (
         <div key={name}>
           <h1>Hello, {name}</h1>
@@ -35,7 +33,7 @@ console.log(temps)
             <div className="chart">
               <Chart data = {humidities} color="red" units="% Humidity"/>
             </div>
-            
+
           </div>
         </div>
   </div>

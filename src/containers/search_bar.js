@@ -4,7 +4,8 @@ import {bindActionCreators} from 'redux';
 import {fetchWeather} from '../actions/index';
 import {fetchNews} from '../actions/news_action';
 import {fetchArtist} from '../actions/top_artists_action.js';
-import {countries} from '../actions/countries.js';
+import {countries} from '../utilities/countries.js'; //array of countrey name.
+
 
 
 class SearchBar extends Component {
@@ -35,7 +36,6 @@ class SearchBar extends Component {
   };
 
   activateRandom() {
-  console.log("event");
   const random = _.sample(countries);
   console.log(random);
     this.setState({term: random});
@@ -55,19 +55,18 @@ class SearchBar extends Component {
 
 <div className="search-container" >
       <form onSubmit={this.onFormSubmit}className="input-group" >
-
-
-            <input
-              placeholder="Get the the weather"
-              className="form-control"
-              value={this.state.term}
-              onChange={this.OninputChange}
-            />
+          <input
+            placeholder="Get the the weather"
+            className="form-control"
+            value={this.state.term}
+            onChange={this.OninputChange}
+          />
           <span className="input-group-btn">
             <button type="submit" className="btn btn-secondary">Submit</button>
+            <button onClick={this.activateRandom}>Feeling lucky?</button>
           </span>
 
-          <button onClick={this.activateRandom}>Feeling lucky?</button>
+
 
 
         </form>
