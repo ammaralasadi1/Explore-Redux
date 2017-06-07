@@ -3,19 +3,22 @@ import {connect} from 'react-redux';
 
 class NewsList extends Component {
   renderNews(response) {
-    const results = response.response.results;
+    const results = response.posts;
+    if (results.length > 10)
+      results.length = 10;
 
-    return (
-      <div key='hi'>
-        {results.map(function(result, index) {
-          return <h6 key={index}>
-            <a href={result.webUrl}>{result.webTitle}</a>
-          </h6>;
-          
-        })}
-      </div>
-    )
-  }
+      return (
+        <div className="artists" key='hi'>
+          {results.map(function(result, index) {
+            console.log(result)
+            return <div className='artist' key={index}>
+              <img className='artist-image' src={result.thread.main_image}/>
+              <a className='artist-name' href={result.url}>{result.title}</a>
+            </div>;
+          })}
+        </div>
+      )
+    }
 
   render() {
     return (
