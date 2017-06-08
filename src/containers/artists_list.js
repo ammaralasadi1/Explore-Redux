@@ -12,7 +12,7 @@ class ArtistList extends Component {
       results.length = 5;
     console.log(results);
     return (
-      <div key='hi'>
+      <div key='hi' className='artists'>
         {results.map(function(result, index) {
           return <div key={index}>
             <img  src={result.image[3]['#text']}/>

@@ -8,12 +8,12 @@ export default class App extends Component {
   render() {
     return (
       <div className="all-containers">
-        <SearchBar className="SearchBar-container"/>
+        <SearchBar/>
         <div className="side-by-side">
-          <WeatherList className="WeatherList-container"/>
-          <ArtistList className="ArtistList-container"/>
+          <WeatherList/>
+          <ArtistList/>
         </div>
-        <NewsList className="NewsList-container"/>
+        <NewsList/>
       </div>
 
     );

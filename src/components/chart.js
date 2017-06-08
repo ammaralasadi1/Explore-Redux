@@ -8,7 +8,7 @@ function average (data) {
 
 export default (props) => {
   return(
-    <div>
+    <div className="chart">
         <Sparklines height={140} width={180} data={props.data}>
           <SparklinesLine color= {props.color}/>
           <SparklinesReferenceLine type="avg" />
@@ -18,4 +18,4 @@ export default (props) => {
   );
 }
 
-// Sparklines is designed to give the user information at a glance. 
+// Sparklines is designed to give the user information at a glance.

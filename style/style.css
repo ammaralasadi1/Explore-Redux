@@ -1,21 +1,28 @@
-
 .polyline, .svg {
   width: 200px;
   height: 200px;
 }
+.all-containers{
+  width: 100%;
+}
+
 .g-map {
   width: 800px;
   height: 600px;
   margin: 0 auto;
 }
-html, body, .SearchBar-container, .container{
+
+html, body, .SearchBar-container, .container {
   width: 100%;
 }
+
 .side-by-side {
   width: 100%;
   display: flex;
   justify-content: flex-start;
 }
+
+
 /*.WeatherList-container{
   width: 90%;
   margin:40px;
@@ -24,25 +31,37 @@ html, body, .SearchBar-container, .container{
   width: 10%;
   margin:40px;
 }*/
-.weather-map-container{
+
+.weather-map-container {
   width: 80%;
   display: flex;
   flex-direction: column;
   margin: 40px;
   background-color: red;
 }
-.weather{
+
+.weather {
   width: 100%;
   display: flex;
   background-color: yellow;
 }
 
-///ARTISTS
+.chart {
+  width: 100%;
+  height: 100%;
+  margin: 5px;
+}
 
-.artists-container{
-  width: 2000px;
+
+/*////////////////////////////////////////////////////// ArtistList//////////////////////////////////////////////////////*/
+
+.artists-container {
+  width: 20%;
   display: flex;
   flex-direction: column;
   margin: 40px;
-  background-color: aqua;
+  background-color: red;
 }
+
+
+/*////////////////////////////////////////////////////// NewsList//////////////////////////////////////////////////////*/
