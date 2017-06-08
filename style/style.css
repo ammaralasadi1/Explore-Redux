@@ -22,9 +22,9 @@ html {
 }
 
 .chart {
-  width: 35%;
-  height: 35%;
-  margin-right: 50px;
+  width: 15%;
+  height: 15%;
+  /*margin-right: 50px;*/
 }
 
 .charts-container {
@@ -32,8 +32,7 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 600px;
+  width: 100%;
   margin: 5px;
   /*-webkit-box-shadow: 6px 4px 26px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 6px 4px 26px 0px rgba(0, 0, 0, 0.75);
@@ -130,16 +129,23 @@ p, span {
 
 .map-charts-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
 }
 
 .map-container {
-  width: 50%;
-  margin-right: 10px;
+  width: 80%;
   align-items: center;
 }
 
 .container {
+  width: 100%;
+}
+
+.side-by-side{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
