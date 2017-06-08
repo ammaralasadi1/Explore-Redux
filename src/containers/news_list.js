@@ -9,32 +9,30 @@ class NewsList extends Component {
 
     return (
       <div className="news-list" key='hi'>
-      
+
         {results.map(function(result, index) {
           console.log(result)
           return (
-<div className="card">
-  <div className="card-image">
-    <figure className="image is-square">
-      <img src={result.thread.main_image} alt="Image"/>
-    </figure>
-  </div>
-  <div className="card-content">
-    <div className="media">
-      <div className="media-left">
+            <div className="card">
+              <div className="card-image">
+                <figure className="image is-square">
+                  <img src={result.thread.main_image} alt="Image"/>
+                </figure>
+              </div>
+              <div className="card-content">
+                <div className="media">
+                  <div className="media-left"></div>
+                  <div className="media-content">
+                    <p className="title is-4">{result.thread.site_type}</p>
+                    <p className="subtitle is-6">{result.thread.site}</p>
+                  </div>
+                </div>
 
-      </div>
-      <div className="media-content">
-        <p className="title is-4">{result.thread.site_type}</p>
-        <p className="subtitle is-6">{result.thread.site}</p>
-      </div>
-    </div>
-
-    <div className="content">
-      <a className='news-title' href={result.url}>{result.title}</a>
-    </div>
-  </div>
-</div>
+                <div className="content">
+                  <a className='news-title' href={result.url}>{result.title}</a>
+                </div>
+              </div>
+            </div>
           )
         })}
       </div>
