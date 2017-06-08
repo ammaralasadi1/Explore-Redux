@@ -12,11 +12,11 @@ class ArtistList extends Component {
       results.length = 5;
     console.log(results);
     return (
-      <div className="artists" key='hi'>
+      <div key='hi'>
         {results.map(function(result, index) {
-          return <div className='artist' key={index}>
-            <img className='artist-image' src={result.image[3]['#text']}/>
-            <a className='artist-name' href={result.url}>{result.name}</a>
+          return <div key={index}>
+            <img  src={result.image[3]['#text']}/>
+            <a  href={result.url}>{result.name}</a>
           </div>;
         })}
       </div>
@@ -25,9 +25,8 @@ class ArtistList extends Component {
 
   render() {
     return (
-      <div className="artist-container">
-        <h1>Top Artists</h1>
-        <div>{this.props.artist.map(this.renderArtist)}</div>
+      <div className="artists-container">
+        {this.props.artist.map(this.renderArtist)}
       </div>
     );
   }
