@@ -14,8 +14,8 @@ class ArtistList extends Component {
     return (
       <div key='hi' className='artists'>
         {results.map(function(result, index) {
-          return <div key={index}>
-            <img  src={result.image[3]['#text']}/>
+          return <div  className="artist"key={index}>
+            <img  className="artist-image"src={result.image[3]['#text']}/>
             <a  href={result.url}>{result.name}</a>
           </div>;
         })}

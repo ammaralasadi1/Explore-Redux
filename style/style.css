@@ -2,18 +2,25 @@
   width: 200px;
   height: 200px;
 }
-.all-containers{
+div{
+  margin: 0px;
+}
+
+.all-containers {
   width: 100%;
 }
 
 .g-map {
   width: 100%;
-  height: 1331px;
+  height: 95vh;
   margin: 0 auto;
+  margin: 20px;
+  border-radius: 20px;
 }
 
 html, body, .SearchBar-container, .container {
   width: 100%;
+  background: aquamarine;
 }
 
 .side-by-side {
@@ -22,46 +29,54 @@ html, body, .SearchBar-container, .container {
   justify-content: flex-start;
 }
 
-
-/*.WeatherList-container{
-  width: 90%;
-  margin:40px;
-}
-.ArtistList-container {
-  width: 10%;
-  margin:40px;
-}*/
-
 .weather-map-container {
   width: 80%;
   display: flex;
   flex-direction: column;
-  margin: 40px;
-  background-color: red;
+  margin: 20px;
 }
 
 .weather {
   width: 100%;
   display: flex;
-  background-color: yellow;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  margin: 20px;
+  border-radius: 20px;
 }
 
 .chart {
   width: 100%;
   height: 100%;
-  margin: 5px;
 }
 
-
-/*////////////////////////////////////////////////////// ArtistList//////////////////////////////////////////////////////*/
+.single-chart {
+  width: 30%;
+  padding: 5px;
+}
 
 .artists-container {
   width: 20%;
   display: flex;
   flex-direction: column;
-  margin: 40px;
-  background-color: red;
+  margin: 37px;
+  align-items: center;
+  /*background-color: black;*/
+  border-radius: 20px;
 }
-
-
-/*////////////////////////////////////////////////////// NewsList//////////////////////////////////////////////////////*/
+.artists{
+  border-radius: 20px;
+  /*background-color: black;*/
+  margin: 10px;
+}
+.artist{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.artist-image{
+  width: 100%;
+  border-radius: 10px;
+}

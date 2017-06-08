@@ -15,16 +15,24 @@ class WeatherList extends Component {
     return (
       <div key={name}>
         <div className="weather">
-          <Chart data={temps} color="orange" units="C"/>
-          <Chart data={pressures} color="green" units="C"/>
-          <Chart data={humidities} color="red" units="%"/>
-          <Chart data={humidities} color="red" units="%"/>
+
+          <div className='single-chart'>
+            temp
+            <Chart data={temps} color="orange" units="C"/>
+          </div>
+          <div className='single-chart'>
+            Humidity
+            <Chart data={humidities} color="red" units="%"/>
+          </div>
+          <div className='single-chart'>
+            Pressure
+            <Chart data={pressures} color="green" units="C"/>
+          </div>
+
         </div>
         <div className="map">
           <GoogleMap lon={lon} lat={lat}/>
         </div>
-
-
 
       </div>
     )
