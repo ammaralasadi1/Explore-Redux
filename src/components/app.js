@@ -11,9 +11,10 @@ export default class App extends Component {
         <SearchBar/>
         <div className="side-by-side">
           <WeatherList/>
-          <ArtistList/>
+          {/* <ArtistList/> */}
+          <NewsList/>
         </div>
-        <NewsList/>
+
       </div>
 
     );
