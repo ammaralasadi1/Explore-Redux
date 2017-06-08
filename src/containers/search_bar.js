@@ -52,21 +52,23 @@ class SearchBar extends Component {
       //submiting html request so it makes a cal to the server. it is making a request
   //to the backend. It is nor react specific, html form elements do that.
 
-
-<div className="search-container" >
-      <form onSubmit={this.onFormSubmit}className="input-group" >
+      <form onSubmit={this.onFormSubmit} className="field has-addons">
+        <p className='control'>
           <input
             placeholder="Get the the weather"
-            className="form-control"
+            className="input is-primary"
             value={this.state.term}
             onChange={this.OninputChange}
           />
-          <span className="input-group-btn">
-            <button type="submit" className="btn btn-secondary">Submit</button>
-            <button onClick={this.activateRandom}>Feeling lucky?</button>
-          </span>
+        </p>
+
+          <p className="control">
+            <button type="submit" className="button is-info">Submit</button>
+          </p>
+          <p className="control">
+            <button className="button is-info" onClick={this.activateRandom}>Feeling lucky?</button>
+          </p>
       </form>
-</div>
     );
   }
 
