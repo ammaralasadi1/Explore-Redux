@@ -6,8 +6,8 @@ export const FETCH_WEATHER = 'FETCH_WEATHER' //to keep the code consistant betwe
 export const FETCH_NEWS = 'FETCH_NEWS'
 
 export function fetchWeather(city) {
-const url = `${ROOT_URL}&q=${city},us`;
-const request = axios.get(url);
+  const url = `${ROOT_URL}&q=${city},us`;
+  const request = axios.get(url);
 
   return {
     type: FETCH_WEATHER, // we dont have to refrence strings, variable are cleaner.

@@ -1,14 +1,18 @@
 {
   "name": "project-4",
+  "description": "Student project using React",
+  "repository": "git@github.com:ammaralasadi1/project-4.git",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch",
-    "homepage": "https://ammaralasadi1.github.io/<project-4>"
+    "homepage": "https://ammaralasadi1.github.io/<project-4>",
+    "build": "npm build",
+    "deploy" : "npm run build&&gh-pages -d build"
   },
-  "author": "",
+  "author": "ammaralasadi1",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.2.1",
@@ -17,6 +21,7 @@
     "babel-preset-react": "^6.1.18",
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
+    "gh-pages": "^1.0.0",
     "jquery": "^2.2.1",
     "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
