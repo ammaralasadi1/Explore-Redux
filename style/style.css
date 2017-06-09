@@ -24,7 +24,7 @@ html {
   width: 100%;
   color: black;
   font-family: 'Playfair Display', serif;
-  background-color: #adadb5;
+  background-color: #009688;
   margin: 0 auto;
 }
 
@@ -78,7 +78,7 @@ a:hover {
   align-items: center;
   margin: 40px;
   text-align: center;
-  background-color: #171717;
+  background-color: #000000;
   margin: 0 auto;
   color: white;
 }

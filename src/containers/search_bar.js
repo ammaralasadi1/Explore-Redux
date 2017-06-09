@@ -10,7 +10,7 @@ class SearchBar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      term: 'Czech Republic'
+      term: 'America'
     }
     //the initial state
     this.OninputChange = this.OninputChange.bind(this);
@@ -59,7 +59,7 @@ class SearchBar extends Component {
       <div className="SearchBar">
         <form className="input-group" onSubmit={this.onFormSubmit}>
 
-          <input placeholder="Get the the weather, location, music and new in one place" className="input" value={this.state.term} onChange={this.OninputChange}/>
+          <input placeholder="Get the the Weather, maps, music and news in one click! Enter a name of city or a countrey to start..." className="input" value={this.state.term} onChange={this.OninputChange}/>
 
           <button className="btn" type="submit" className="btn btn-secondary">Submit</button>
 

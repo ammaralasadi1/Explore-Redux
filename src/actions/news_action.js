@@ -4,7 +4,7 @@ import axios from 'axios';
 export const FETCH_NEWS = 'FETCH_NEWS' //to keep the code consistant between the action creator and the reducer
 
 export function fetchNews(city) {
-  const url = `http://webhose.io/filterWebContent?token=708aad39-3535-4ded-9b2f-098115a5610f&format=json&ts=1496784572748&sort=social.facebook.likes&q=location%3A${city}`;
+  const url = `http://webhose.io/filterWebContent?token=3b548a88-b8bd-4d04-915e-ad82bf137ade&format=json&ts=1496784572748&sort=social.facebook.likes&q=location%3A${city}`;
 
   const request = axios.get(url)
   return {
