@@ -57,25 +57,27 @@ class SearchBar extends Component {
       // when you press enter and the form elemt child. the browser thinks you aare
       //submiting html request so it makes a cal to the server. it is making a request
   //to the backend. It is nor react specific, html form elements do that.
-  <div className="SearchBar-container">
-      <form onSubmit={this.onFormSubmit} className="field is-grouped">
-        <p className='control is-expanded'>
-          <input
-            placeholder="Get the the weather"
-            className="input"
-            value={this.state.term}
-            onChange={this.OninputChange}
-          />
-        </p>
+  <div className="SearchBar">
+      <form onSubmit={this.onFormSubmit}className="input-group" >
 
-          <p className="control">
-            <button type="submit" className="button is-light">Submit</button>
-          </p>
-          <p className="control">
-            <button className="button is-light" onClick={this.activateRandom}>Feeling lucky?</button>
-          </p>
-      </form>
-    </div>
+
+            <input
+              placeholder="Get the the weather"
+              className="input"
+              value={this.state.term}
+              onChange={this.OninputChange}
+            />
+
+            <button className="btn" type="submit" className="btn btn-secondary">Submit</button>
+
+
+          <button className="btn" onClick={this.activateRandom}>Feeling lucky?</button>
+
+
+        </form>
+
+
+</div>
     );
   }
 

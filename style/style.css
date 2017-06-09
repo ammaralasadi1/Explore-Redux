@@ -13,17 +13,31 @@
 }
 
 .g-map {
-  width: 94%;
-  height: 50vh;
+  width: 100%;
+  height: 75vh;
+  /*border-radius: 20px;*/
+  margin-top: 20px;
   margin: 0 auto;
-  margin: 20px;
-  border-radius: 20px;
 }
 
-html, body, .SearchBar-container, .container {
+html {
   width: 100%;
-  background: aquamarine;
-  color: white;
+  color: black;
+  font-family: 'Playfair Display', serif;
+  background-color: #EDEDED;
+  margin: 0 auto;
+}
+body{
+  width: 95%;
+  margin: 0 auto;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+a:hover{
+  text-decoration: none;
+  color: inherit;
 }
 
 .side-by-side {
@@ -32,12 +46,13 @@ html, body, .SearchBar-container, .container {
 }
 
 .weather-map-container {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: white;
-  border-radius: 20px;
-  margin: 40px;
+background-color: white;
+  /*border-radius: 20px;*/
+  margin: 20px;
+
 }
 
 .weather {
@@ -45,29 +60,33 @@ html, body, .SearchBar-container, .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
-  border-radius: 20px;
+  margin: 40px;
+  /*border-radius: 20px;*/
   text-align: center;
+  background-color: #171717;
+  margin: 0 auto;
+  color: white;
 }
 
 .chart {
   width: 100%;
-  height: 100%;
 }
 
 .single-chart {
-  width: 30%;
+  width: 15%;
   padding: 5px;
 }
 
 .artists-container {
-  width: 80%;
+  width: 100%;
+  /*border-radius: 20px;*/
+  margin: 20px;
+  background-color: white;
 }
 
 .artists {
   width: 100%;
-  border-radius: 20px;
-  background-color: white;
+  /*border-radius: 20px;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,11 +106,11 @@ html, body, .SearchBar-container, .container {
 }
 
 .news-container {
-  width: 30%;
-  margin-right: 5%;
+  width: 40%;
+  /*border-radius: 20px;*/
   background-color: white;
-  border-radius: 20px;
-  margin-top: 2%;
+  margin: 20px 0px 20px 20px;
+
 }
 
 .news-list {
@@ -102,14 +121,14 @@ html, body, .SearchBar-container, .container {
   align-items: center;
 }
 
-.card {
+.nothing {
   width: 89%;
   margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+
 }
 
 .title {
@@ -125,8 +144,48 @@ html, body, .SearchBar-container, .container {
 .cityName {
   padding: 5px;
   font-size: 38px;
+  text-align: center;
 }
 
 .news-image {
   width: 100%;
+}
+.SearchBar{
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  margin: 20px;
+
+}
+.input{
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 50%;
+  margin: 2px;
+  padding: 10px 20px;
+  border: 3px solid #b7b7b7;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: 20px;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+}
+
+.btn{
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  margin: 2px;
+  padding: 10px 20px;
+  border: 1px solid #018dc4;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font: 20px;
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
 }

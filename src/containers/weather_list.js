@@ -20,7 +20,7 @@ class WeatherList extends Component {
         </div>
         <div className="weather">
           <div className='single-chart'>
-            temp
+            Temp
             <Chart data={temps} color="orange" units="C"/>
           </div>
           <div className='single-chart'>
@@ -29,7 +29,15 @@ class WeatherList extends Component {
           </div>
           <div className='single-chart'>
             Pressure
-            <Chart data={pressures} color="green" units="C"/>
+            <Chart data={pressures} color="green" units="hPa"/>
+          </div>
+          <div className='single-chart'>
+            Rain
+            <Chart data={temps} color="green" units="Over 5 days"/>
+          </div>
+          <div className='single-chart'>
+            Preception
+            <Chart data={humidities} color="purple" units="Over 5 days"/>
           </div>
 
         </div>

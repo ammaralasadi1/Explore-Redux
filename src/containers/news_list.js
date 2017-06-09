@@ -13,7 +13,7 @@ class NewsList extends Component {
         {results.map(function(result, index) {
           console.log(result)
           return (
-            <div className="card">
+            <div className="nothing">
 
               <img className='news-image' src={result.thread.main_image} alt="Image"/>
 
@@ -30,6 +30,7 @@ class NewsList extends Component {
     return (
       <div className='news-container'>
 
+        <p className="cityName">News</p>
         {this.props.news.map(this.renderNews)}
       </div>
     );
