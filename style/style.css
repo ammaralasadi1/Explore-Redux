@@ -17,6 +17,7 @@
   height: 75vh;
   margin-top: 20px;
   margin: 0 auto;
+  border-radius: 0px 0px 20px 20px;
 }
 
 html {
@@ -94,7 +95,7 @@ a:hover {
 .artists-container {
   width: 100%;
   border-radius: 20px;
-  margin: 10px 20px 20px 2px;
+  margin: 5px 20px 20px 20px;
   background-color: white;
 }
 
