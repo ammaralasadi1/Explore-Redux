@@ -8,16 +8,17 @@ export default class App extends Component {
   render() {
     return (
       <div className="all-containers">
-        <SearchBar className="SearchBar"/>
-        <div className="side-by-side">
-          <div className='stacked'>
-            <WeatherList/>
-            <ArtistList/>
+          <SearchBar className="SearchBar"/>
+          <div className="side-by-side">
+            <div className='stacked'>
+              <WeatherList/>
+              <ArtistList/>
+            </div>
+            <NewsList/>
           </div>
-          <NewsList/>
+
         </div>
 
-      </div>
 
     );
   }

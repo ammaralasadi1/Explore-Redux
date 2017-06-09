@@ -15,13 +15,10 @@ class WeatherList extends Component {
     return (
       <div key={name}>
 
-
-
-
-          <div className="cityName">
-              <p>Five days weather report for {name}</p>
-          </div>
-<div className="weather">
+        <div className="cityName">
+          <p>Five days weather report for {name}</p>
+        </div>
+        <div className="weather">
           <div className='single-chart'>
             temp
             <Chart data={temps} color="orange" units="C"/>
