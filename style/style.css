@@ -3,14 +3,15 @@
   height: 200px;
 }
 
-
 .all-containers {
   width: 100%;
 }
-.SearchBar-container{
+
+.SearchBar-container {
   margin-top: 40px;
   width: 70%;
 }
+
 .g-map {
   width: 94%;
   height: 50vh;
@@ -34,7 +35,7 @@ html, body, .SearchBar-container, .container {
   width: 80%;
   display: flex;
   flex-direction: column;
-  background-color: black;
+  background-color: white;
   border-radius: 20px;
   margin: 40px;
 }
@@ -61,13 +62,12 @@ html, body, .SearchBar-container, .container {
 
 .artists-container {
   width: 80%;
-
 }
 
 .artists {
   width: 100%;
   border-radius: 20px;
-  background-color: black;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,43 +86,47 @@ html, body, .SearchBar-container, .container {
   width: 100%;
 }
 
-.news-container{
-width: 30%;
-margin: 40px;
-border-radius: 20px;
+.news-container {
+  width: 30%;
+  margin-right: 5%;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 2%;
 }
 
-.news-list{
-display: flex;
-flex-direction: column;
-width: 100%;
-justify-content: center;
-align-items: center;
-
+.news-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
-.card{
-  width:80%;
+.card {
+  width: 89%;
   margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: red 2px solid;
+  background-color: white;
 }
+
 .title {
   text-transform: capitalize;
 }
-.stacked{
+
+.stacked {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.cityName{
+
+.cityName {
   padding: 5px;
   font-size: 38px;
-
 }
-.news-image{
+
+.news-image {
   width: 100%;
 }
