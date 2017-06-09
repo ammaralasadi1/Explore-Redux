@@ -11,7 +11,7 @@ import {countries} from '../utilities/countries.js'; //array of countrey name.
 class SearchBar extends Component {
     constructor (props) {
       super(props)
-      this.state = { term : ''}
+      this.state = { term : 'Italy'}
       //the initial state
       this.OninputChange = this.OninputChange.bind(this);
       this.onFormSubmit = this.onFormSubmit.bind(this);
@@ -27,6 +27,12 @@ class SearchBar extends Component {
     console.log(event.target.value);
 
   };
+  componentDidMount(){
+    this.props.fetchWeather(this.state.term);
+    this.props.fetchNews(this.state.term);
+    this.props.fetchArtist(this.state.term);
+    this.setState({term: ''})
+  }
   onFormSubmit (event) {
     event.preventDefault();
     this.props.fetchWeather(this.state.term);
@@ -51,24 +57,25 @@ class SearchBar extends Component {
       // when you press enter and the form elemt child. the browser thinks you aare
       //submiting html request so it makes a cal to the server. it is making a request
   //to the backend. It is nor react specific, html form elements do that.
-
-      <form onSubmit={this.onFormSubmit} className="field has-addons">
-        <p className='control'>
+  <div className="SearchBar-container">
+      <form onSubmit={this.onFormSubmit} className="field is-grouped">
+        <p className='control is-expanded'>
           <input
             placeholder="Get the the weather"
-            className="input is-primary"
+            className="input"
             value={this.state.term}
             onChange={this.OninputChange}
           />
         </p>
 
           <p className="control">
-            <button type="submit" className="button is-info">Submit</button>
+            <button type="submit" className="button is-light">Submit</button>
           </p>
           <p className="control">
-            <button className="button is-info" onClick={this.activateRandom}>Feeling lucky?</button>
+            <button className="button is-light" onClick={this.activateRandom}>Feeling lucky?</button>
           </p>
       </form>
+    </div>
     );
   }
 

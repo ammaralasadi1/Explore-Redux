@@ -10,9 +10,12 @@ div {
 .all-containers {
   width: 100%;
 }
-
+.SearchBar-container{
+  margin-top: 40px;
+  width: 70%;
+}
 .g-map {
-  width: 100%;
+  width: 94%;
   height: 50vh;
   margin: 0 auto;
   margin: 20px;
@@ -27,7 +30,6 @@ html, body, .SearchBar-container, .container {
 .side-by-side {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
 }
 
 .weather-map-container {
@@ -35,6 +37,9 @@ html, body, .SearchBar-container, .container {
   display: flex;
   flex-direction: column;
   margin: 20px;
+  background-color: black;
+  border-radius: 20px;
+  margin: 40px;
 }
 
 .weather {
@@ -42,9 +47,9 @@ html, body, .SearchBar-container, .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
   margin: 20px;
   border-radius: 20px;
+  text-align: center;
 }
 
 .chart {
@@ -58,18 +63,15 @@ html, body, .SearchBar-container, .container {
 }
 
 .artists-container {
-  width: 25%;
-  margin: 37px;
+  width: 80%;
 
 }
 
 .artists {
   width: 100%;
   border-radius: 20px;
-  background-color: white;
-  margin: 10px;
+  background-color: black;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -79,21 +81,46 @@ html, body, .SearchBar-container, .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
   margin: 5px;
 }
 
 .artist-image {
   width: 100%;
-  border-radius: 10px;
 }
 
 
-
-
 .news-container{
-  width: 20%;
-  margin: 40px;
-  border-radius: 20%;
+  width: 40%;
+  margin: 35px 10px 10px 20px;
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.news-lsit{
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  background-color: black;
+}
+.card{
+  width:100%;
+  margin: 20px 0px 20px 0px;
+}
+.title {
+  text-transform: capitalize;
+}
+.stacked{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cityName{
+  padding: 5px;
+    font-size: 38px;
 
 }
