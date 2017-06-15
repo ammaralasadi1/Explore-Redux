@@ -10,7 +10,7 @@ class SearchBar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      term: 'America'
+      term: 'France'
     }
     //the initial state
     this.OninputChange = this.OninputChange.bind(this);
