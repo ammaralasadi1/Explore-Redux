@@ -9,11 +9,9 @@
   "repository": "git@github.com:ammaralasadi1/Explore-Redux.git",
   "homepage": "https://ammaralasadi1.github.io/Explore-Redux/",
   "scripts": {
-    "biuld": "npm run biuld",
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "postinstall": "webpack -p",
-    "start":"node server.js",
-
+    "build": "webpack -p",
+    "start": "node server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
@@ -44,6 +42,8 @@
     "react-sparkline": "^2.0.0",
     "react-sparklines": "^1.6.0",
     "redux": "^3.0.4",
-    "redux-promise": "^0.5.3"
+    "redux-promise": "^0.5.3",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
   }
 }
