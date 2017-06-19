@@ -12,9 +12,14 @@ export default class App extends Component {
         <div className="side-by-side">
           <div className='stacked'>
             <WeatherList/>
-            <ArtistList/>
           </div>
-          <NewsList/>
+          <div className='alone'>
+            <NewsList/>
+          </div>
+        </div>
+        <div className="buttom">
+          <hr/>
+          <ArtistList/>
         </div>
 
       </div>

@@ -16,7 +16,6 @@ class WeatherList extends Component {
       <div key={name}>
 
         <div className="cityName">
-          <p>Five days weather report for {name}</p>
         </div>
         <div className="weather">
           <div className='single-chart'>
@@ -31,16 +30,8 @@ class WeatherList extends Component {
             Pressure
             <Chart data={pressures} color="green" units="hPa"/>
           </div>
-          <div className='single-chart'>
-            Rain
-            <Chart data={temps} color="green" units="Over 5 days"/>
-          </div>
-          <div className='single-chart'>
-            Preception
-            <Chart data={humidities} color="purple" units="Over 5 days"/>
-          </div>
-
         </div>
+        <hr/>
         <div className="map">
           <GoogleMap lon={lon} lat={lat}/>
         </div>

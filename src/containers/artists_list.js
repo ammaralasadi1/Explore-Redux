@@ -29,7 +29,7 @@ class ArtistList extends Component {
   render() {
     return (
       <div className="artists-container">
-        <p className="cityName">Top 5 favorite artists for this countrey</p>
+        <p className="sub-header">Top 5 favorite artists</p>
         {this.props.artist.map(this.renderArtist)}
       </div>
     );
